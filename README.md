@@ -1,46 +1,108 @@
-📊 Buscador de Contactos Comerciales:
-Bienvenido al proyecto Buscador de Contactos Comerciales. Esta plantilla está diseñada para ayudarte a configurar un sistema de inteligencia artificial con múltiples agentes de manera sencilla, aprovechando el poderoso y flexible framework que ofrece crewAI.
+# 🔎 Sales Contact Finder
 
-Nuestro objetivo es permitir que tus agentes colaboren eficazmente en tareas complejas, maximizando su inteligencia colectiva y capacidades.
+This project is **Venko Assistant**, an AI-powered tool built with **CrewAI** and **Streamlit**.  
+It automates company research, identifies key decision-makers, and generates tailored sales strategies with an interactive web interface.
 
-⚙️ Instalación:
-Requisitos: Asegurate de tener una versión de Python compatible (≥ 3.10 y ≤ 3.13).
+---
 
-Instalar uv (gestor de dependencias recomendado):
+## 🚀 Features
+- **Multi-agent system (CrewAI):**  
+  - Company Research Agent  
+  - Organizational Structure Analyst  
+  - Key Contact Finder  
+  - Sales Strategist  
+- **Custom workflows:** Orchestrated using CrewAI with YAML-based configuration for agents and tasks.  
+- **Streamlit Frontend:** User-friendly web app to input target company and product, run agents, and visualize results.  
+- **Automated outputs:**  
+  - Generates **Markdown reports** of findings.  
+  - Converts reports into **PDF** files for easy sharing.  
+- **Secure API management:** Keys are handled through `.env` variables, never exposed in the codebase.  
 
-pip install uv
+---
 
-Instalar dependencias del proyecto:
-Navegá a la raíz del proyecto y ejecutá:
+## 🖼️ Workflow Architecture
+![Workflow Architecture](docs/workflow.png)
 
-uv lock
-uv sync
+---
 
-Configurar claves API:
-Asegurate de tener un archivo .env con las siguientes variables:
+## ⚙️ Tech Stack
+- [Python 3.12](https://www.python.org/)  
+- [CrewAI](https://github.com/joaomdmoura/crewAI) – Multi-agent orchestration  
+- [Streamlit](https://streamlit.io/) – Interactive frontend  
+- [OpenAI API](https://platform.openai.com/) – LLM for research & text generation  
+- [Serper API](https://serper.dev/) – Web search integration  
+- [pdfkit](https://pypi.org/project/pdfkit/) – Export reports as PDF  
 
-OPENAI_API_KEY=tu_clave_openai
-SERPER_API_KEY=tu_clave_serper
+---
 
-🔧 Personalización:
-🧠 Definí tus agentes en: src/sales_contact_finder/config/agents.yaml
+## 📂 Project Structure
+```
+├── src/
+│   └── sales_contact_finder/
+│       ├── crew.py
+│       ├── agents.yaml
+│       ├── tasks.yaml
+├── app.py              # Streamlit frontend
+├── pyproject.toml      # Dependencies and scripts
+├── README.md           # Project documentation
+├── .env                # API Keys (excluded in .gitignore)
+└── .gitignore
+```
 
-🗂️ Definí tus tareas en: src/sales_contact_finder/config/tasks.yaml
+---
 
-⚙️ Configurá la lógica del equipo en: src/sales_contact_finder/crew.py
+## 🔐 Environment Variables
+Create a `.env` file in the project root:
 
-🧪 Modificá los inputs de prueba en: src/sales_contact_finder/main.py
+```ini
+OPENAI_API_KEY=your_openai_key_here
+SERPER_API_KEY=your_serper_key_here
+```
 
-🚀 Ejecución del Proyecto:
-Para poner en marcha tu equipo de agentes de IA y comenzar la ejecución de tareas, corré uno de estos comandos desde la carpeta raíz:
+⚠️ The `.env` file is excluded from GitHub via `.gitignore`.
 
-crewai run
-# o bien
-uv run sales_contact_finder
+---
 
-Esto inicializa el equipo, ensamblando los agentes y asignándoles tareas según tu configuración.
-El ejemplo sin modificar generará un archivo report.md con los resultados de una investigación sobre LLMs.
+## ▶️ How to Run
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/franm419/Buscador-Contactos-Comerciales.git
+   cd Buscador-Contactos-Comerciales
+   ```
 
-👥 Estructura del Equipo:
-La aplicación está compuesta por múltiples agentes de IA, cada uno con roles, objetivos y herramientas específicas.
-Estos agentes colaboran en tareas definidas en config/tasks.yaml y están configurados en config/agents.yaml.
+2. Create and activate a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # Mac/Linux
+   venv\Scripts\activate    # Windows
+   ```
+
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Run the Streamlit app:
+   ```bash
+   streamlit run app.py
+   ```
+
+5. Open your browser at:
+   - Local: [http://localhost:8501](http://localhost:8501)  
+   - Network: `http://<your-ip>:8501`
+
+---
+
+## 📊 Example Output
+- `buyer_contact.md` → Detailed report in Markdown.  
+- `reporte_comercial.pdf` → Exported PDF report with company insights, contacts, and sales strategy.  
+
+---
+
+## 👨‍💻 Author
+Francisco Moyano Escalera  
+Specialist in Data, AI & Automation  
+📧 frannmmm419@gmail.com  
+🌐 GitHub: [franm419](https://github.com/franm419)
+
+
