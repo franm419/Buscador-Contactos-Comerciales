@@ -20,11 +20,6 @@ It automates company research, identifies key decision-makers, and generates tai
 
 ---
 
-## 🖼️ Workflow Architecture
-![Workflow Architecture](docs/workflow.png)
-
----
-
 ## ⚙️ Tech Stack
 - [Python 3.12](https://www.python.org/)  
 - [CrewAI](https://github.com/joaomdmoura/crewAI) – Multi-agent orchestration  
