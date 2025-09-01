@@ -1,0 +1,43 @@
+tarea_investigacion_empresa:
+  description: >
+    Realizar una investigación exhaustiva sobre {empresa_objetivo}. Enfocate en su industria,
+    tamaño, noticias recientes, desafíos que puedan estar enfrentando y cualquier información
+    que sugiera que podrían beneficiarse de {nuestro_producto}. Buscá iniciativas tecnológicas
+    recientes o esfuerzos de transformación digital.
+  expected_output: >
+    Un panorama completo de {empresa_objetivo}, incluyendo datos clave, desarrollos recientes
+    y posibles puntos de dolor que {nuestro_producto} podría resolver.
+
+tarea_analisis_estructura_organizacional:
+  description: >
+    Analizar la estructura organizacional de {empresa_objetivo}. Identificar los departamentos
+    y roles clave que probablemente estén involucrados en decisiones relacionadas con la compra
+    de {nuestro_producto}. Considerá tanto los responsables técnicos como los referentes del negocio.
+  expected_output: >
+    Un desglose de la estructura organizacional relevante de {empresa_objetivo},
+    destacando departamentos y roles que sean potenciales stakeholders para {nuestro_producto}.
+
+tarea_busqueda_contactos:
+  description: >
+    Con base en el análisis organizacional, identificar personas específicas en
+    {empresa_objetivo} que estén en posición de influir o tomar decisiones sobre
+    la compra de {nuestro_producto}. Encontrar sus nombres, cargos y, si es posible,
+    información de contacto profesional o perfiles de LinkedIn.
+  expected_output: >
+    Una lista de contactos clave en {empresa_objetivo}, incluyendo sus nombres, cargos,
+    departamentos y cualquier información de contacto disponible, URLs de LinkedIn y, si es posible,
+    teléfonos y correos electrónicos.
+
+tarea_estrategia_ventas:
+  description: >
+    Utilizando toda la información recopilada sobre {empresa_objetivo} y los contactos identificados,
+    desarrollar una estrategia para contactar a estas personas sobre {nuestro_producto}. Considerar los
+    desafíos de la empresa, los roles de los contactos y cómo nuestro producto puede aportar valor.
+
+    REMOVER CUALQUIER COMENTARIO O FRASES COMO "mi mejor respuesta completa y final para esta tarea"
+  expected_output: >
+    Un objeto BuscadorContactosComerciales que contenga:
+    1. Una descripción concisa de la empresa
+    2. Una lista de contactos clave con su información
+    3. Una estrategia de contacto personalizada para acercarse a estos contactos respecto de {nuestro_producto}
+    Debe estar en formato Markdown para facilitar su lectura y compartición con el equipo de ventas.
